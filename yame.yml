@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ExoBucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: STD21108
+  SSM:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Join ['', [/test/, /s3/bucket-name]]
+      Type: String
+      Value: !GetAt ExoBucket.Arm
