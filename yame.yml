@@ -4,7 +4,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties: 
       BucketName: std21108
-  SsmArn:
+  SsmARN:
     Type: AWS::SSM::Parameter
     Properties:
       Name: !Join ['', [/test/arn, /s3/bucket-name]]
