@@ -4,9 +4,15 @@ Resources:
     Type: AWS::S3::Bucket
     Properties: 
       BucketName: std21108
-  SSM:
+  SsmArn:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: !Join ['', [/test, /s3/bucket-name]]
+      Name: !Join ['', [/test/arn, /s3/bucket-name]]
       Type: String
       Value: !GetAtt ExoBucket.Arn
+  SsmName:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Join ['', [/test/name, /s3/bucket-name]]
+      Type: String
+      Value: !Ref ExoBucket
