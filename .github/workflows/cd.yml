@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy
         run: |
-          aws cloudformation create-stack --stack-name exo1 --template-body file://yame.yml
+          aws cloudformation create-stack --stack-name exo1-herilala --template-body file://yame.yml
