@@ -3,7 +3,7 @@ Resources:
   ExoBucket:
     Type: AWS::S3::Bucket
     Properties: 
-      BucketName: std21108
+      BucketName: std21108v001
   SsmARN:
     Type: AWS::SSM::Parameter
     Properties:
